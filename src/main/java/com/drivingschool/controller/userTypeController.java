@@ -37,9 +37,9 @@ public class userTypeController {
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("userTypeId", userTypeId);
         usertypes = userypeservice.find_userTypeByuserTypeId(map);
-        ModelAndView mode = new ModelAndView();
-        mode.addObject("userTypes", usertypes);
-        mode.setViewName("index");
-        return mode;
+        ModelAndView model = new ModelAndView();
+        model.addObject("userTypes", usertypes);
+        model.setViewName("index");
+        return model;
     }
 }
